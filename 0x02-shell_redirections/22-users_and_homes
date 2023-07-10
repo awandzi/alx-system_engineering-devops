@@ -1,0 +1,2 @@
+#!/bin/bash
+cat -d ':' -f 1,6 22-users_and_homes | sort
