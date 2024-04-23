@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-
 # checking for command line arguments
+
 if [ $# -lt 4 ]
 then
 	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
 	exit 1
 fi
 
-# assigning paramentals to a variables
+# assigning paramentals to variables
 
 path_to_file=$1
 ip=$2
@@ -15,13 +15,12 @@ username=$3
 path_to_shh_key=$4
 
 # disabling strict host key checking
-
 scp -o "StrictHostKeyChecking=no" -i "$path_to_ssh_key" "$path_to_file" "$username@$ip:~/"
 
 # checking for successful transfered files
 if [ $? -eq 0 ]
 then
-	echo "file succesfully transfered"
+	echo "file successfully transfered"
 else
 	echo "file transfered failed"
 fi
