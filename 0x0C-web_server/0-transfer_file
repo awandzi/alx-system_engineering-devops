@@ -11,7 +11,7 @@ fi
 
 path_to_file=$1
 ip=$2
-username=$8
+username=$3
 path_to_shh_key=$4
 
 # disabling strict host key checking
