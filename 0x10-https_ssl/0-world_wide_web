@@ -1,4 +1,4 @@
-
+#!/usr/nin/env bash
 
 # the script print the subdomain of the domain
 
@@ -17,6 +17,5 @@ function audit_subdomain {
 		record_type=$(dig "$sub.$domain" | awk '/ANSWER SECTION/ {getline; print $4 }')
 		destination=$(dig "$sub.$domain" | awk '/ANSWER SECTION/ {getline; print $5 }')
 		echo "The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]"
-	done
 }
 audit_subdomain "$1" "$2"
