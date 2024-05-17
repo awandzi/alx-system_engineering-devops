@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # configure Nginx to be running as the nginx user
 sudo service stop
 
